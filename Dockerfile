@@ -13,5 +13,5 @@ FROM maven:3.9-amazoncorretto-19 as build
 WORKDIR /app1
 COPY --from=repo /app1/liontech-online-library-web-app /app1/
 RUN mvn test 
-RUN mvn instarun
+RUN mvn install
 RUN mvn clean package 
